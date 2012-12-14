@@ -1,0 +1,56 @@
+#!/usr/bin/env perl
+
+$buf = "";
+$pre_filename = "";
+$ext_ln = 0;
+
+while (<STDIN>) {
+    chomp;
+    next if /^--/;
+    /^(\d+):(.*)|^(\d+)-(.*)/ and do {
+        if ($buf) {
+            print $buf;
+            $buf = "";
+        }
+        $lineno = ($1 || $3) + $ext_ln;
+        unless ($is_open) {
+            $is_open = 1;
+            $buf .= "H\n";
+        }
+        $buf .= "${lineno}d\n";
+        $ext_ln--;
+        next;
+    };
+    /^(.*?):(\d+):(.*)|^(.*?)-(\d+)-(.*)/ and do {
+        if ($buf) {
+            print $buf;
+            $buf = "";
+        }
+        $filename = $1 || $4;
+        $lineno = $2 || $5;
+        if ($filename =~ /-\d+-/) {
+            /^(.*?)-(\d+)-(.*)/ and do {
+                $filename = $1;
+                $lineno = $2;
+            };
+        }
+        if ($pre_filename ne $filename) {
+            $pre_filename = $filename;
+            if ($is_open) {
+                $buf .= "w\n";
+                $ext_ln = 0;
+            } else {
+                $is_open = 1;
+                $buf .= "H\n";
+            }
+            $buf .= "e ${filename}\n";
+        }
+        $buf .= ($lineno + $ext_ln)."d\n";
+        $ext_ln--;
+        next;
+    };
+}
+
+print $buf if ($buf);
+
+print "w\n" if $is_open;
