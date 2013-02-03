@@ -9,8 +9,8 @@ After that Ed will do them.
 
 Geed is a collection of Perl scripts. Currently, there are two scripts available geed-repl and geed-del.
 
-NOTE: Since if you use Geed without a version control system, your source code may be extensively 
-destroyed, so it is strongly recommend that you operate with a version control systems such as Git
+NOTE: If you use Geed without a version control system, your source code may be extensively 
+destroyed. So it is strongly recommend that you operate with a version control systems such as Git.
 
 # Install
 
