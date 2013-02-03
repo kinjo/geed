@@ -76,8 +76,8 @@ a.c
     int
     main()
     {
-    foo();
-    return 1;
+      foo();
+      return 1;
     }
 
 b.c
@@ -112,8 +112,8 @@ a.c
     int
     main()
     {
-    foo();
-    return 1;
+      foo();
+      return 1;
     }
 
 b.c
