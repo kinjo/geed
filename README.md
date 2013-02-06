@@ -4,7 +4,7 @@ Geed
 When you want to insert the comments to any functions defined in a.c, b.c and z.c, 
 you will open the files and edit them usually. But Geed will do that at a time.
 
-Geed generates ed commands to insert, replace and delete any lines scattered in several files.
+Geed generates the ed commands to insert, replace and delete any lines scattered in several files.
 After that Ed will do them.
 
 Geed is a collection of Perl scripts. Currently, there are two scripts available geed-repl and geed-del.
@@ -20,7 +20,7 @@ Just put scripts in your ~/bin directory and go.
 
 ## geed-repl
 
-geed-repl generates replacing and inserting ed commands from grep output
+geed-repl generates the replacing and inserting ed commands from grep output
 to replace and insert any lines to a number of files at a time.
 
 For example, there are 2 files a.c and b.c.
@@ -91,10 +91,10 @@ b.c
 
 ## geed-del
 
-geed-del generates deleting ed commands from grep output.
-You can extract deleting lines with grep and remove lines if you don't want to delete them.
+geed-del generates the ed commands from output to delete any lines.
+You can extract deleting lines using grep and remove lines if you don't want to delete them.
 
-If you want remove all comments inserted at previous section, follow below steps.
+If you want to remove all comments inserted at the previous section, follow below steps.
 
 Extract comments using grep.
 
