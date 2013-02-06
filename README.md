@@ -1,8 +1,8 @@
 Geed
 ====
 
-When you want to insert the comments to any functions defined in a.c, b.c and z.c, 
-you will open the files and edit them usually. But Geed will do that at a time.
+When you want to insert the comments to any functions defined in a.c, b.c, d.c and z.c, 
+you try to open and edit the files many times. But, Geed will do that at a time.
 
 Geed generates the ed commands to insert, replace and delete any lines scattered in several files.
 After that Ed will do them.
