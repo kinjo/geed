@@ -14,7 +14,7 @@ destroyed. So it is strongly recommend that you operate with a version control s
 
 # Install
 
-Just put scripts in your ~/bin directory and go.
+Just put the scripts in your ~/bin directory and go.
 
 # How to use
 
