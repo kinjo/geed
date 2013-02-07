@@ -20,7 +20,7 @@ Just put the scripts in your ~/bin directory and go.
 
 ## geed-repl
 
-geed-repl generates the replacing and inserting ed commands from grep output
+geed-repl generates the ed commands from grep output
 to replace and insert any lines to a number of files at a time.
 
 For example, there are 2 files a.c and b.c.
