@@ -43,8 +43,8 @@ b.c
 Now, if you want to insert some comments before the two functions main() and foo(), 
 following steps will be useful for you.
 
-At first, extract target lines to a file using grep and edit it.
-NOTE: File names and line numbers are required to geed-repl.
+At first, extract the target lines to a file using grep and then edit it.
+NOTE: filename and line number are required to geed-repl.
 
     grep -Hn '^[a-z]' *.c > grep.out
 
