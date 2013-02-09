@@ -100,7 +100,7 @@ Extract comments using grep.
 
     grep -Hn -e '/\*' -e '\ *\*' *.c > grep.out
 
-In this case, since there is no line you don't want to delete, skip the editing grep.out,
+In this case, since there is no line you don't want to delete, skip to edit grep.out,
 straightly execute this.
 
     geed-del < grep.out | ed
