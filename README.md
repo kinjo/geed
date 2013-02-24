@@ -91,10 +91,10 @@ b.c
 
 ## geed-del
 
-geed-del generates the ed commands from output to delete any lines.
+geed-del generates the ed commands to delete any lines.
 You can extract deleting lines using grep and remove lines if you don't want to delete them.
 
-If you want to remove all comments inserted at the previous section, follow below steps.
+For example, if you want to remove all comments inserted at the previous section, follow below steps.
 
 Extract comments using grep.
 
